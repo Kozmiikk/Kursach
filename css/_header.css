@@ -1,0 +1,376 @@
+/* header */
+
+.nav {
+    background-color: var(--black);
+    padding: 10px 0;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 65px;
+    height: auto;
+}
+
+.nav__right-box {
+    padding-right: 130px;
+}
+
+.nav__list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+}
+
+.nav__item {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.25em;
+    font-weight: 500;
+
+    transition: color .3s ease;
+}
+
+.nav__item:hover {
+    color: var(--yellow);
+}
+
+/* header_body */
+
+.swiper {
+    height: 95vh;
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.slide-img--1 {
+    background: url(../img/main_page/1.jpg) no-repeat center center / cover;
+}
+
+.slide-img--2 {
+    background: url(../img/main_page/2nd-bg.jpg) no-repeat center center / cover;
+
+}
+
+.slide-img--2 ~ .slide-data h1, .slide-img--3 ~ .slide-data h1 {
+    color: var(--white);
+}
+
+.slide-img--2 ~ .slide-data a, .slide-img--3 ~ .slide-data a {
+    border: 3px solid var(--white);
+}
+
+.slide-img--3 {
+    background: url(../img/main_page/3rd-bg.jpg) no-repeat center center / cover;
+
+}
+
+.slide-img--4 {
+    background: url(../img/main_page/4th-bg.jpg) no-repeat center center / cover;
+}
+
+.slide-data {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.slide-data-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    /* height: 95vh; */
+}
+
+.header__title {
+    color: var(--yellow);
+    font-family: Montserrat, sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 120%;
+}
+
+.header__button {
+    display: inline-block;
+    border-radius: 40px;
+    border: 3px solid var(--yellow);
+    padding: 14px 30px;
+    font-size: 1.4em;
+    font-weight: 500;
+
+    transition: transform .3s ease;
+}
+
+.header__button:hover {
+    transform: scale(1.07);
+} 
+
+.header__line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--yellow);
+}
+
+/* burger menu */
+
+.hidden-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+    top: 84px;
+    left: -105%;
+    transition: 0.3s linear;
+    z-index: 2;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.hidden-menu a.nav__link {
+    width: 100vw;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.375rem;
+    font-weight: 800;
+    padding: 0 30px;
+    transition: 0.3s ease-out;
+}
+
+/* .hidden-menu a:hover {
+    transform: translateX(10px);
+} */
+
+.hidden-menu li {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    transition:
+        background-color 0.3s ease-in-out,
+        color 0.2s ease;
+}
+
+.hidden-menu li:hover {
+    background-color: #e64e0d;
+    color: var(--black);
+}
+
+.hidden-menu-ticker {
+    display: none;
+}
+
+.btn-menu {
+    display: none;
+
+    padding: 2px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    z-index: 3;
+    width: 30px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.btn-menu span {
+    display: block;
+    height: 3px;
+    background-color: var(--white);
+    margin: 7px 0 0;
+    transition: all 0.2s ease-out;
+    position: relative;
+}
+
+.btn-menu span.first {
+    margin-top: 0;
+}
+
+.hidden-menu-ticker:checked~.hidden-menu {
+    left: 0;
+}
+
+.hidden-menu-ticker:checked~.btn-menu span.first {
+    -webkit-transform: rotate(45deg);
+    top: 10px;
+}
+
+.hidden-menu-ticker:checked~.btn-menu span.second {
+    opacity: 0;
+}
+
+.hidden-menu-ticker:checked~.btn-menu span.third {
+    -webkit-transform: rotate(-45deg);
+    top: -10px;
+}
+
+@media only screen and (max-width: 1240px) and (min-width: 1170px){
+    .nav__right-box {
+        padding-right: 60px;
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+    .nav__right-box {
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .nav__item {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .btn-menu {
+        display: block;
+        visibility: visible;
+    }
+
+    .nav__right-box {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .header__title {
+        font-size: 2em;
+    }
+
+    .slide-data-inner {
+        gap: 35px;
+    }
+}
+
+@media only screen and (max-width: 535px) {
+    .header__title {
+        font-size: 1.75em;
+    }
+
+    .slide-data-inner {
+        gap: 20px;
+    }
+
+    .header__button {
+        font-size: 1.125em;
+    }
+
+    .swiper {
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .header__title {
+        font-size: 1.375em;
+    }
+
+    .header__button {
+        font-size: 1em;
+        padding: 11px 24px;
+    }
+}
+
+/* application form */
+
+.modal-window.application-window > div{
+    height: 80vh;
+    width: 50vw;
+
+    overflow: auto;
+}
+
+.m-form {
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 100%;
+    height: 100%;
+
+}
+
+.m-form__title {
+    font-size: 2em;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.m-form__info {
+    color: #ff3600;
+    font-size: 0.875em;
+    font-weight: 500;
+    line-height: 110%;
+    margin-bottom: 13px;
+
+    display: none;
+}
+
+.m-form__input {
+    margin-bottom: 20px;
+    padding: 0 15px;
+    font-size: 0.875em;
+    display: inline-block;
+    width: 96%;
+    height: 36px;
+    border-radius: 3px;
+}
+
+.m-form__button {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 30px;
+    background-color: var(--yellow);
+    color: var(--black);
+    font-size: 1em;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 900px) {
+    .m-form__title {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .modal-window.application-window > div {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .modal-window.application-window > div {
+        padding-top: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .m-form__title {
+        font-size: 1.125em;
+        margin-bottom: 20px;
+    }
+}

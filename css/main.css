@@ -1,0 +1,151 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+:root {
+    --black: #1b1b1d;
+    --white: #f6f6f6;
+    --yellow: #FAFF00;
+}
+
+.container {
+    max-width: 1500px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.body--no-scroll {
+    overflow: hidden;
+}
+
+/* form */
+
+.form {
+    display: flex;
+    gap: 35px;
+    /* flex-wrap: wrap; */
+}
+
+.form__input {
+    width: 423px;
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid #AEAEAE;
+    background-color: #202020;
+
+    color: #D8D8D8;
+    font-size: 1.25em;
+    font-weight: 400;
+    padding: 0 20px;
+}
+
+.form__button {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: var(--yellow);
+    color: var(--black);
+    font-family: Montserrat, sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+
+    transition: background-color .2s ease;
+}
+
+.form__button:hover {
+    background-color: var(--white);
+}
+
+/* achievements */
+.achievements {
+    background: url(../img/main_page/2.jpg) no-repeat center 0 / cover;
+}
+
+.achievement-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 925px;
+
+    gap: 83px;
+}
+
+.achievement__title {
+    text-align: center;
+    color: var(--yellow);
+    font-family: Montserrat, sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.achievement__text li{
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 180%;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 700px){
+    .achievement__title {
+        font-size: 2.5em;
+    }
+    
+    .achievement__text li{
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .achievement__title {
+        font-size: 2em;
+    }
+    
+    .achievement__text li {
+        font-size: 1.125em;
+    }
+
+    .achievement-inner {
+        gap: 50px;
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .achievement__title {
+        font-size: 1.75em;
+    }
+    
+
+    .achievement__text li {
+        font-size: 1em;
+        text-align: start;
+        margin-bottom: 8px;
+    }
+
+    .achievement-inner {
+        gap: 35px;
+        align-items: start;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .achievement__text li {
+        font-size: 0.93em;
+    }
+
+    .achievement-inner {
+        height: 500px;
+    }
+}

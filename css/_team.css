@@ -1,0 +1,188 @@
+.team {
+    padding: 80px 0;
+    background-color: var(--black);
+    background: url(../img/team/bg.jpg) no-repeat 0 0 / cover;
+}
+
+.team__heading {
+    color: var(--yellow);
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+    line-height: 120%;
+    margin-bottom: 120px;
+}
+
+.team__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 60px 30px;
+}
+
+
+.card {
+    color: var(--white);
+    position: relative;
+}
+
+.card__bio {
+    /* bg */
+    /* background: #FAFF00; */
+
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(58, 58, 58, 0.568);
+
+    /* ------ */
+    padding: 20px;
+    width: 460px;
+    height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 12px 12px 0px 12px;
+
+    margin-bottom: 50px;
+}
+
+.card__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: auto;
+    height: 28%;
+    height: 70%;
+
+    border-radius: 12px 0px 12px 0px;
+}
+
+.card__name {
+    text-align: end;
+    text-align: right;
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.card__date {
+    text-align: right;
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.card__info {
+    padding-bottom: 50px;
+    border-bottom: 5px solid var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.card__info:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.card__info-title {
+    color: var(--white);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.card__info-count {
+    color: var(--white);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1500px) and (min-width: 1320px) {
+    .card__bio {
+        width: 400px;
+        height: 220px;
+    }
+
+    .card__name {
+        font-size: 1.75em;
+    }
+
+    .card__date {
+        font-size: 1.125em;
+    }
+}
+
+@media only screen and (max-width: 1010px) and (min-width: 800px) {
+    .card__bio {
+        width: 350px;
+        height: 200px;
+    }
+
+    .card__name {
+        font-size: 1.5em;
+    }
+
+    .card__date {
+        font-size: 1.125em;
+    }
+
+    .card__info-title, .card__info-count {
+        font-size: 1.25em;
+    }
+
+    .card__info {
+        padding-bottom: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .team__heading {
+        font-size: 2em;
+        margin-bottom: 60px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .team {
+        padding: 50px 0;
+    }
+
+    .card__bio {
+        width: 280px;
+        height: 170px;
+        margin-bottom: 35px;
+    }
+
+    .card__img {
+        height: 65%;
+    }
+
+    .card__name {
+        font-size: 1.22em;
+    }
+
+    .card__date {
+        font-size: 0.9em;
+    }
+
+    .card__info-title, .card__info-count {
+        font-size: 1.125em;
+    }
+
+    .card__info {
+        padding-bottom: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .team__heading {
+        font-size: 2em;
+        margin-bottom: 60px;
+    }
+}

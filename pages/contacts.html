@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/_header.css">
+    <link rel="stylesheet" href="../css/_footer.css">
+    <link rel="stylesheet" href="../css/_contacts.css">
+    <link rel="stylesheet" href="../css/_modal.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@200;300;500;600;700&display=swap"
+        rel="stylesheet">
+    <script defer src="main.js"></script>
+    <script defer src='../modal_application.js'></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__nav nav">
+                <div class="container">
+                    <div class="nav-inner">
+                        <a href="../index.html" class="nav__logo logo"><img src="../img/logo.svg" alt="logo"></a>
+
+                        <div class="nav__right-box">
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="../index.html" class="nav__link">Главная</a></li>
+                                <li class="nav__item"><a href="./team.html" class="nav__link">Команда</a></li>
+                                <li class="nav__item"><a href="./schedule.html" class="nav__link">Расписание
+                                        тренировок</a></li>
+                                <li class="nav__item"><a href="./academy.html" class="nav__link">Академия</a></li>
+                                <li class="nav__item"><a href="./contacts.html" class="nav__link">Контакты</a>
+                                <li class="nav__item"><a href="#" class="nav__link application__modal">Подать заявку</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- burger menu -->
+                        <input type="checkbox" id="m1" class="hidden-menu-ticker">
+                        <label class="btn-menu" for="m1">
+                            <span class="first"></span>
+                            <span class="second"></span>
+                            <span class="third"></span>
+                        </label>
+
+                        <div class="hidden-menu">
+                            <li class="nav__item"><a href="../index.html" class="nav__link">Главная</a></li>
+                            <li class="nav__item"><a href="./team.html" class="nav__link">Команда</a></li>
+                            <li class="nav__item"><a href="./schedule.html" class="nav__link">Расписание
+                                    тренировок</a></li>
+                            <li class="nav__item"><a href="./academy.html" class="nav__link">Академия</a></li>
+                            <li class="nav__item"><a href="./contacts.html" class="nav__link">Контакты</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link application__modal">Подать заявку</a>
+                        </div>
+                    </div>
+
+                    <div id="open-modal" class="modal-window application-window">
+                        <div>
+                            <a href="#" title="Close" class="application-modal-close">Закрыть</a>
+
+                            <form class="modal__form m-form">
+                                <h2 class="m-form__title">Заполните заявку</h2>
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Имя">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Фамилия">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="tel" class="m-form__input" placeholder="Телефон">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="tel" class="m-form__input" placeholder="ФИО матери">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="tel" class="m-form__input" placeholder="Телефон матери">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="tel" class="m-form__input" placeholder="ФИО отца">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="tel" class="m-form__input" placeholder="Телефон отца">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" onfocus="(this.type='date')"
+                                    placeholder="Дата рождения">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Гражданство">
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="email" class="m-form__input" placeholder="Email">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Футбольная школа">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Стаж занятий в футбольных школах">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <select name="amplua" class="m-form__input">
+                                    <option value="" selected disabled>Амплуа</option>
+                                    <option value="Нападающий">Нападающий</option>
+                                    <option value="Полузащитник">Полузащитник</option>
+                                    <option value="Защитник">Защитник</option>
+                                    <option value="Вратарь">Вратарь</option>
+                                    <!-- Добавьте другие амплуа по необходимости -->
+                                </select>
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Рост">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Вес">
+
+                                <a href="#" class="m-form__button">Отправить</a>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="open-modal" class="modal-window application-submit-window">
+                        <div>
+                            <a href="#" title="Close" class="application-modal-close">Закрыть</a>
+
+                            <div class="modal__text application-text">Спасибо за заявку!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="main__address address">
+                <div class="container">
+                    <div class="address-inner">
+                        <p class="address__text">Приходи поддержать любимую команду! <br>
+                            По адресу: <br>
+                            Школьная ул., 1Б, микрорайон Подрезково, Химки
+                        </p>
+
+                        <div class="address__map"><img src="../img/contacts/map.jpg" alt=""></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main__sponsors sponsors">
+                <div class="container">
+                    <div class="sponsors-inner">
+                        <h2 class="sponsors__title">Наши спонсоры:</h2>
+
+                        <div class="sponsors-wrapper">
+                            <img src="../img/contacts/vtb.svg" alt="vtb" class="sponsors__card">
+                            <img src="../img/contacts/pari.svg" alt="paro" class="sponsors__card">
+                            <img src="../img/contacts/lukoil.svg" alt="lukoil" class="sponsors__card">
+                            <img src="../img/contacts/qatar.svg" alt="qatar" class="sponsors__card">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <a href="#" class="footer__logo logo"><img src="../img/logo.svg" alt="logo"></a>
+
+                    <div class="footer__middle-box">
+                        <div class="footer__top-line">
+                            <a href="#"><img src="../img/icons/tg.svg" alt="tg"></a>
+                            <a href="#"><img src="../img/icons/vk.svg" alt="vk"></a>
+                        </div>
+
+                        <div class="footer-wrapper">
+                            <div class="footer__middle-line">
+                                <img src="../img/icons/phone.svg" alt="phone">
+                                <p>+ 7 (495) 673-12-37</p>
+                            </div>
+
+                            <div class="footer__bottom-line">
+                                <img src="../img/icons/mail.svg" alt="mail">
+                                <p>mfk_viktoria@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-sponsors-wrapper">
+                        <img src="../img/contacts/vtb.svg" alt="vtb" class="footer__card">
+                        <img src="../img/contacts/pari.svg" alt="paro" class="footer__card">
+                        <img src="../img/contacts/lukoil.svg" alt="lukoil" class="footer__card">
+                        <img src="../img/contacts/qatar.svg" alt="qatar" class="footer__card">
+                    </div>
+
+                    <div class="footer__right-box">
+                        <nav class="footer__nav">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="./team.html" class="footer__link">Команда</a></li>
+                                <li class="footer__item"><a href="./schedule.html" class="footer__link">Расписание
+                                        тренировок</a></li>
+                                <li class="footer__item"><a href="./academy.html" class="footer__link">Академия</a></li>
+                                <li class="footer__item"><a href="./contacts.html" class="footer__link">Контакты</a>
+                                </li>
+                                <li class="footer__item"><a href="#" class="footer__link application__modal">Подать
+                                        заявку</a>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

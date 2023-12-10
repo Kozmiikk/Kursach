@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/_header.css">
+    <link rel="stylesheet" href="../css/_footer.css">
+    <link rel="stylesheet" href="../css/_schedule.css">
+    <link rel="stylesheet" href="../css/_modal.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@200;300;500;600;700&display=swap"
+        rel="stylesheet">
+    <script defer src="main.js"></script>
+    <script defer src="../modal.js"></script>
+    <script defer src='../modal_application.js'></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__nav nav">
+                <div class="container">
+                    <div class="nav-inner">
+                        <a href="../index.html" class="nav__logo logo"><img src="../img/logo.svg" alt="logo"></a>
+
+                        <div class="nav__right-box">
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="../index.html" class="nav__link">Главная</a></li>
+                                <li class="nav__item"><a href="./team.html" class="nav__link">Команда</a></li>
+                                <li class="nav__item"><a href="./schedule.html" class="nav__link">Расписание
+                                        тренировок</a></li>
+                                <li class="nav__item"><a href="./academy.html" class="nav__link">Академия</a></li>
+                                <li class="nav__item"><a href="./contacts.html" class="nav__link">Контакты</a>
+                                <li class="nav__item"><a href="#" class="nav__link application__modal">Подать заявку</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- burger menu -->
+                        <input type="checkbox" id="m1" class="hidden-menu-ticker">
+                        <label class="btn-menu" for="m1">
+                            <span class="first"></span>
+                            <span class="second"></span>
+                            <span class="third"></span>
+                        </label>
+
+                        <div class="hidden-menu">
+                            <li class="nav__item"><a href="../index.html" class="nav__link">Главная</a></li>
+                            <li class="nav__item"><a href="./team.html" class="nav__link">Команда</a></li>
+                            <li class="nav__item"><a href="./schedule.html" class="nav__link">Расписание
+                                    тренировок</a></li>
+                            <li class="nav__item"><a href="./academy.html" class="nav__link">Академия</a></li>
+                            <li class="nav__item"><a href="./contacts.html" class="nav__link">Контакты</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link application__modal">Подать заявку</a>
+                        </div>
+                    </div>
+
+                    <div id="open-modal" class="modal-window application-window">
+                        <div>
+                            <a href="#" title="Close" class="application-modal-close">Закрыть</a>
+
+                            <form class="modal__form m-form">
+                                <h2 class="m-form__title">Заполните заявку</h2>
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Имя">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Фамилия">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="tel" class="m-form__input" placeholder="Телефон">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="tel" class="m-form__input" placeholder="ФИО матери">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="tel" class="m-form__input" placeholder="Телефон матери">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="tel" class="m-form__input" placeholder="ФИО отца">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="tel" class="m-form__input" placeholder="Телефон отца">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" onfocus="(this.type='date')"
+                                    placeholder="Дата рождения">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Гражданство">
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="email" class="m-form__input" placeholder="Email">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Футбольная школа">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Стаж занятий в футбольных школах">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <select name="amplua" class="m-form__input">
+                                    <option value="" selected disabled>Амплуа</option>
+                                    <option value="Нападающий">Нападающий</option>
+                                    <option value="Полузащитник">Полузащитник</option>
+                                    <option value="Защитник">Защитник</option>
+                                    <option value="Вратарь">Вратарь</option>
+                                    <!-- Добавьте другие амплуа по необходимости -->
+                                </select>
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Рост">
+
+                                <label class="m-form__info">Заполните поле</label>
+                                <input type="text" class="m-form__input" placeholder="Вес">
+
+                                <a href="#" class="m-form__button">Отправить</a>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="open-modal" class="modal-window application-submit-window">
+                        <div>
+                            <a href="#" title="Close" class="application-modal-close">Закрыть</a>
+
+                            <div class="modal__text application-text">Спасибо за заявку!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="main__sc-heading sc-heading">
+                <div class="container">
+                    <div class="sc-heading-inner">
+                        <h2 class="sc-heading__title">28 октября - 05 ноября <br> 2023: Футбольный лагерь Victoria
+                            Academy в
+                            Турции</h2>
+                        <p class="sc-heading__subtitle">Летний футбольный лагерь от официальной академии Paris
+                            Saint-Germain. 7 дней эффективных футбольных тренировок в комфортных условиях на берегу
+                            моря.
+                            Для детей любого уровня подготовки. Присоединяйтесь к нам!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main__sc-cards sc-cards">
+                <div class="container">
+                    <div class="sc-cards-inner">
+                        <div class="sc-cards-dates">
+                            <p class="sc-cards__date">28 октября</p>
+                            <p class="sc-cards__date">29 октября - 4 ноября</p>
+                            <p class="sc-cards__date">5 ноября</p>
+                        </div>
+
+                        <div class="sc-cards__blocks">
+                            <div class="sc-cards__block block">
+                                <h3 class="block-title">28 октября</h3>
+
+                                <div class="block-wrapper">
+                                    <div class="block__row">
+                                        <div class="block__item">
+                                            <h4 class="block__title">10:00 - 14:00</h4>
+                                            <p class="block__desc">Заезд и регистрация</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">14:00 - 15:00</h4>
+                                            <p class="block__desc">Обед</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">15:00 - 15:30</h4>
+                                            <p class="block__desc">Информационное собрание</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="block__row">
+                                        <div class="block__item">
+                                            <h4 class="block__title">15:30 - 16:00</h4>
+                                            <p class="block__desc">Знакомство</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">16:00 - 18:00</h4>
+                                            <p class="block__desc">Отдых</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">18:30 - 20:00</h4>
+                                            <p class="block__desc">Тренировка</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="block__row">
+                                        <div class="block__item">
+                                            <h4 class="block__title">20:30 - 21:15</h4>
+                                            <p class="block__desc">Ужин</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">21:30 - 22:00</h4>
+                                            <p class="block__desc">Лекция главного тренера</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">22:30</h4>
+                                            <p class="block__desc">Отбой</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sc-cards__block block">
+                                <h3 class="block-title">29 октября - 4 ноября</h3>
+
+                                <div class="block-wrapper">
+                                    <div class="block__row">
+                                        <div class="block__item">
+                                            <h4 class="block__title">10:00 - 14:00</h4>
+                                            <p class="block__desc">Заезд и регистрация</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">14:00 - 15:00</h4>
+                                            <p class="block__desc">Обед</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">15:00 - 15:30</h4>
+                                            <p class="block__desc">Информационное собрание</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="block__row">
+                                        <div class="block__item">
+                                            <h4 class="block__title">15:30 - 16:00</h4>
+                                            <p class="block__desc">Знакомство</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">16:00 - 18:00</h4>
+                                            <p class="block__desc">Отдых</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">18:30 - 20:00</h4>
+                                            <p class="block__desc">Тренировка</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="block__row">
+                                        <div class="block__item">
+                                            <h4 class="block__title">20:30 - 21:15</h4>
+                                            <p class="block__desc">Ужин</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">21:30 - 22:00</h4>
+                                            <p class="block__desc">Лекция главного тренера</p>
+                                        </div>
+
+                                        <div class="block__item">
+                                            <h4 class="block__title">22:30</h4>
+                                            <p class="block__desc">Отбой</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main__sc-about sc-about">
+                <div class="container">
+                    <div class="sc-about-inner">
+                        <div class="sc-about__content">
+                            <p class="sc-about__subtitle">ОБ АКАДЕМИИ</p>
+                            <h2 class="sc-about__title">АКАДЕМИЯ ВИКТОРИИ</h2>
+
+                            <p class="sc-about__desc">Несколько раз в год во время школьных каникул наши ребята выезжают
+                                на сборы заграницу чтобы усиленно потренироваться и провести время в компании друзей по
+                                команде. Лучший тренерский штаб и врачи, которые следят за каждым игроком индивидуально
+                            </p>
+
+                            <div class="sc-about__subscribe">
+                                <h2 class="sc-about-subscribe-title">ПОДПИШИСЬ НА НОВОСТИ</h2>
+                                <p class="sc-about-subscribe-subtitle">Подпишитесь на актуальные события и анонсы новых
+                                    наборов в академию
+                                </p>
+
+                                <form class="sc-about-form form">
+                                    <input type="email" class="form__input" placeholder="Введите свою почту">
+
+                                    <a href="#" class="form__button">Подписаться</a>
+                                </form>
+
+                                <div id="open-modal-subscribe" class="modal-window">
+                                    <div>
+                                        <a href="#" title="Close" class="modal-close-subscribe">Закрыть</a>
+
+                                        <div class="modal__text-subscribe">Вы успешно подписались на обновления!</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sc-about__right-box">
+                            <img src="../img/schedule/2.jpg" alt="команда">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <a href="#" class="footer__logo logo"><img src="../img/logo.svg" alt="logo"></a>
+
+                <div class="footer__middle-box">
+                    <div class="footer__top-line">
+                        <a href="#"><img src="../img/icons/tg.svg" alt="tg"></a>
+                        <a href="#"><img src="../img/icons/vk.svg" alt="vk"></a>
+                    </div>
+
+                    <div class="footer-wrapper">
+                        <div class="footer__middle-line">
+                            <img src="../img/icons/phone.svg" alt="phone">
+                            <p>+ 7 (495) 673-12-37</p>
+                        </div>
+
+                        <div class="footer__bottom-line">
+                            <img src="../img/icons/mail.svg" alt="mail">
+                            <p>mfk_viktoria@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-sponsors-wrapper">
+                    <img src="../img/contacts/vtb.svg" alt="vtb" class="footer__card">
+                    <img src="../img/contacts/pari.svg" alt="paro" class="footer__card">
+                    <img src="../img/contacts/lukoil.svg" alt="lukoil" class="footer__card">
+                    <img src="../img/contacts/qatar.svg" alt="qatar" class="footer__card">
+                </div>
+
+                <div class="footer__right-box">
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="./team.html" class="footer__link">Команда</a></li>
+                            <li class="footer__item"><a href="./schedule.html" class="footer__link">Расписание
+                                    тренировок</a></li>
+                            <li class="footer__item"><a href="./academy.html" class="footer__link">Академия</a></li>
+                            <li class="footer__item"><a href="./contacts.html" class="footer__link">Контакты</a>
+                            </li>
+                            <li class="footer__item"><a href="#" class="footer__link application__modal">Подать
+                                    заявку</a>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
